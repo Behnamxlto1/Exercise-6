@@ -1,0 +1,112 @@
+def show():
+    for row in game_board:
+        for cell in row :
+            print(cell , " " , end = " ")
+        print()
+
+title = ("tic tac toe","slant")
+print(title)
+
+def check_game():
+   
+    if game_board[0][2] == "X" and game_board[1][1] == "X" and game_board[2][0] == "X" :
+        print("player1 : //barande//")
+        
+    
+    if game_board[0][0] == "O" and game_board[0][1] == "O" and game_board[0][2] == "O" :
+        print("player2 : //barande//")
+        
+    
+    if game_board[1][0] == "X" and game_board[1][1] == "X" and game_board[1][2] == "X" :
+        print("player1 : //barande//")
+        
+    
+    if game_board[1][0] == "O" and game_board[1][1] == "O" and game_board[1][2] == "O" :
+        print("player2 : //barande//")
+    
+    if game_board[2][0] == "X" and game_board[2][1] == "X" and game_board[2][2] == "X" :
+        print("player1 : //barande//")
+    
+    if game_board[2][0] == "O" and game_board[2][1] == "O" and game_board[2][2] == "O" :
+        print("player2 : //barande//")
+    
+    if game_board[0][0] == "X" and game_board[1][0] == "X" and game_board[2][0] == "X" :
+        print("player1 : //barande//")
+    
+    if game_board[0][0] == "O" and game_board[1][0] == "O" and game_board[2][0] == "O" :
+        print("player2 : //barande//")
+    
+    if game_board[0][1] == "X" and game_board[1][1] == "X" and game_board[2][1] == "X" :
+        print("player1 : //barande//")
+    
+    if game_board[0][1] == "O" and game_board[1][1] == "O" and game_board[2][1] == "O" :
+        print("player2 : //barande//")
+    
+    if game_board[0][2] == "X" and game_board[1][2] == "X" and game_board[2][2] == "X" :
+        print("player1 : //barande//")
+    
+    if game_board[0][2] == "O" and game_board[1][2] == "O" and game_board[2][2] == "O" :
+        print("player2 : //barande//")
+    
+    if game_board[0][0] == "X" and game_board[1][1] == "X" and game_board[2][2] == "X" :
+        print("player1 : //barande//")
+    
+    if game_board[0][0] == "O" and game_board[1][1] == "O" and game_board[2][2] == "O" :
+        print("player2 : //barande//")
+    
+    if game_board[0][2] == "X" and game_board[1][1] == "X" and game_board[2][0] == "X" :
+        print("player1 : //barande//")
+    
+    if game_board[0][2] == "O" and game_board[1][2] == "O" and game_board[2][0] == "O" :
+        print("player2 : //barande//")
+        
+    if game_board[0][0] == "O" and game_board[0][1] == "O" and game_board[0][2] == "O" :
+        print("player2 : //barande//")
+
+        
+           
+    
+    if game_board[0][0] != "-" and game_board[0][1] != "-" and game_board[0][2] != "-" and game_board[1][0] != "-" and game_board[1][1] != "-" and game_board[1][2] != "-" and game_board[2][0] != "-" and game_board[2][1] != "-" and game_board[2][2] != "-" :
+        print("//Barabr//")    
+
+game_board = [["-", "-", "-"],
+                ["-", "-", "-"],
+                ["-", "-", "-"]]
+show()
+for i in range(10):
+    while True:
+        #player1
+        print("player 1 :")
+        while True:
+            row = int(input("enter row : "))
+            col = int(input("enter col : "))
+            if 0 <= row <= 2 and 0 <= col <= 2:
+                if game_board[row][col] == "-" :
+                    game_board[row][col] = "X"
+                    check_game()
+                    show()
+                    break
+                else :
+                    print("yeki dige entekhan kn : ")
+            else:
+                print("beyn 0 v 2")
+                continue
+        
+        #player2 
+        print("player 2 :")
+        while True:
+            row = int(input("enter row : "))
+            col = int(input("enter col : "))
+            if 0 <= row <= 2 and 0 <= col <= 2:
+                if game_board[row][col] == "-" :
+                    game_board[row][col] = "O"
+                    show()
+                    check_game()
+                    break
+                else :
+                    print("yeki dige entekhab kn : ")
+            else :
+                print("beyn 0 v 2 ")
+                continue
+
+
